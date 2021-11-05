@@ -1,0 +1,149 @@
+.newPostContainer{
+    background-color: rgb(248, 248, 248);
+    height: 100vh;
+}
+.newPostContainerInner{
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    flex-direction: column;
+}
+.navPost{
+    width: 100vw;
+    left:0;
+    top:0;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    background-color: white;
+    border-bottom:1px solid rgb(214, 214, 214);
+}
+.navPostInner{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+.newPost{
+    font-size:1rem;
+    font-weight: 600;
+}
+.shareButton{
+    font-size:.9rem;
+    color :rgb(80, 124, 255);
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: inherit;
+    border:0px solid rgb(243, 243, 243);
+    cursor: pointer;
+}
+.shareButton:disabled{
+    color:rgb(184, 200, 250);
+    cursor:not-allowed;
+}
+.inputContainer{
+    margin-top:40px;
+    display: flex;
+    position:relative;
+    height:100px;
+}
+.newPostInput{
+    outline: none;
+    border:none;
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    padding:20px 100px 20px 50px;
+    resize: none;
+    height: 100%;
+    border-bottom:1px solid rgb(214, 214, 214);
+}
+.newPostInput::placeholder{
+    font-size: .9rem;
+}
+.divImagePreview{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    position:absolute;
+    top:10px;
+    right: 10px;
+}
+.delete{
+    color:black;
+}
+.noDisplayDelete{
+    display: none;
+}
+.imagePreview{
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+}
+.preview,
+.previewFocused{
+    background-color: white;
+    width: 100%;
+    margin-top:10px;
+    border:1px solid rgb(214, 214, 214);
+}
+.previewFocused{
+    opacity: 0.6;
+}
+.previewTitle{
+    text-align: center;
+    padding:5px 0px;
+    font-size: 1.3rem;
+    border-bottom:1px solid rgb(214, 214, 214);
+}
+.previewNameFlex{
+    display: flex;
+    align-items: center;
+    padding:10px;
+}
+.imagePreviewDown{
+    width: 100%;
+    max-height: 400px;
+}
+.displayNamePreviewUp{
+    font-size: 0.8rem;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.displayNamePreviewDown{
+    font-size: 0.7rem;
+    padding:10px;
+    font-weight: 600;
+}
+.previewInputDisplay{
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+
+@media(min-width:600px){
+    .navPost{
+        padding:10px 15px;
+    }
+    .newPostContainerInner{
+        max-width: 600px;
+        margin:20px auto;
+    }
+    .inputContainer{
+        border:1px solid rgb(214, 214, 214);
+    }
+}
+@media(min-width:1000px){
+    .newPostContainerInner{
+        max-width: 1000px;
+        align-items: center;
+    }
+    .preview,
+    .previewFocused{
+        width:600px;
+    }
+    .inputContainer{
+        width:600px;
+        
+    }
+}

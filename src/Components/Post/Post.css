@@ -1,0 +1,282 @@
+.postsContainer{
+    background-color: white;
+    max-width: 600px;
+    margin:0 auto;
+}
+.deleted{
+    width: 100vw;
+    height: 100vh;
+}
+.postAvatarContainer,
+.postAvatarContainerPostPage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+}
+.postAvatar,
+.postAvatarPostPage{
+    display: flex;
+    align-items: center;
+}
+.optionsActive{
+    display: none;
+}
+.optionsNotActive{
+    display: flex;
+    flex-direction: column;
+}
+.postPicture,
+.postPicturePostPage{
+    width: 100%;
+    max-height: 500px;
+}
+.userPost{
+    font-size:.8rem;
+    margin-left:5px;
+    cursor:pointer;
+}
+.userPost:hover{
+    text-decoration:underline;
+}
+.reactions,
+.reactionsPostPage{
+    padding:5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.likes{
+    padding:5px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.postDescriptionAll,
+.postDescriptionAllPostPage{
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding:5px 10px;
+}
+.postText{
+    font-weight: 400;
+    margin-left: 5px;
+}
+.postedTime,
+.postedTimePostPageDown{
+    padding:10px 10px;
+    font-weight: 500;
+    font-size: .6rem;
+    color:rgb(185, 185, 185);
+    letter-spacing: 0.5px;
+}
+.commentUnderPost,
+.commentUnderPostPage{
+    padding:0px 10px 5px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    max-width: 590px;
+    overflow: hidden;
+}
+.commentPostUsername:hover,
+.postDescriptionUsername:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.commentUnderPostText{
+    font-weight: 400;
+}
+.viewAllCommentsLow,
+.viewAllCommentsPostPageLow{
+    color:rgb(185, 185, 185);
+    padding:10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.viewAllCommentsBig,
+.viewAllCommentsPostPageBig{
+    display: none;
+    padding:10px;
+}
+.skeletonPostContainer{
+    padding:10px;
+    max-width: 600px;
+    margin:0 auto;
+}
+.skeletonPostAvatar{
+    display: flex;
+    align-items: center;
+}
+.addCommentPostBig{
+    border-top:1px solid rgb(214, 214, 214);
+    position:relative;
+    display: none;
+}
+.addCommentPostBig>input{
+    width:100%;
+    border:none;
+    padding:15px 45px 15px 10px;
+    outline:none;
+}
+.addCommentPostBig>button{
+    border:none;
+    background-color: inherit;
+    position: absolute;
+    right:10px;
+    top:15px;
+    color:rgb(80, 124, 255);
+    font-weight: 700;
+    cursor:pointer;
+}
+.addCommentPostBig>button:disabled{
+    cursor:not-allowed;
+    color:rgb(184, 200, 250)
+}
+.postAvatarContainerBig,
+.postAvatarContainerBigPostPage{
+    display: none;
+}
+.commentsPostPageContainer{
+    display: none;
+}
+@media(min-width:600px){
+    .postsContainer,
+    .postsContainerPostPage{
+        margin:20px auto;
+        border:1px solid rgb(214, 214, 214);
+    }
+    .postedTime{
+        padding:5px 10px 15px 10px;
+    }
+    .postAvatarContainer{
+        padding:15px 10px 10px 10px
+    }
+
+}
+@media(min-width:770px){
+    .addCommentPostBig{
+        display: flex;
+    }
+    .postAvatarContainerBigPostPage{
+        border-bottom: 1px solid rgb(214, 214, 214);;
+    }
+    .reactionsPostPage{
+        border-top: 1px solid rgb(214, 214, 214);
+    }
+    .postsContainerPostPage{
+        display: flex;
+        margin:30px 0px;
+    }
+    .postAvatarContainerPostPage{
+        display: none;
+    }
+    .postPicturePostPage{
+        height: 100%;
+    }
+    .reactionsContainerPostPage{
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        border-left:1px solid rgb(214, 214, 214);
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    .postAvatarContainerBigPostPage{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:10px;
+    }
+    .commentUnderPostPage,
+    .viewAllCommentsPostPageLow,
+    .viewAllCommentsLow,
+    .postDescriptionAllPostPage,
+    .viewAllCommentsPostPageBig{
+        display: none;
+    }
+    .viewAllCommentsBig{
+        display: flex;
+        color:rgb(185, 185, 185);
+        padding:10px;
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+    .postPagePostDescription{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .postPageUserPostDescription{
+        display: flex;
+        flex-direction: row;
+    }
+    .postPageUserPostDescription>p{
+        margin-left: 5px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        align-self: center;
+    }
+    .postDescriptionPostPageText{
+        font-weight: 400;
+    }
+    .commentsPostPageContainer{
+        display: flex;
+        flex-direction: column;
+        overflow:auto;
+        height:300px;
+        padding:10px;
+        max-width: 300px;
+    }
+    .commentsPostPageContainer::-webkit-scrollbar,
+    .commentsPostPageContainer::-webkit-scrollbar-track {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+    }
+    .commentsPostPageContainer::-webkit-scrollbar-thumb{
+        background-color: rgb(214, 214, 214);
+    }
+    .commentPostPage{
+        margin:10px 0px;
+    }
+    .commentsTextPostPage{
+        display: flex;
+        align-items: center;
+    }
+    .commentsTextPostPage>p{
+        margin-left: 5px;
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+    .commentsPostPageUsername:hover{
+        text-decoration: underline;
+        cursor: pointer;
+
+    }
+    .timeAgoCommentPostPage{
+        margin-left: 40px;
+        color:rgb(185, 185, 185);
+        font-size: 0.7rem;
+        margin-top:5px;
+    }
+    .skeletonPostPageContainer{
+        display: flex;
+        border:1px solid rgb(214, 214, 214);
+        max-width: 1000px;
+        margin:30px auto;
+    }
+    .skeletonAvatarPostPage{
+        width:400px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .skeletonPostPageAvatarInner{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin:5px 0px;
+    }
+    .postPageUsernamePostDescription:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}

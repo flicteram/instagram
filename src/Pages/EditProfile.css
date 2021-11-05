@@ -1,0 +1,79 @@
+.editProfileContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin:0 auto;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+.editProfileContainerInner{
+    margin:60px 10px 10px 10px;
+}
+.changeProfilePhotoContainerAll{
+    display: flex;
+    align-items: center;
+}
+.changeProfilePhotoContainer{
+    margin-left: 15px;
+}
+.usernameEditProfile{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.changeProfilePhoto{
+    font-size: .8rem;
+    color:rgb(80, 124, 255);
+    font-weight: 700;
+    cursor: pointer;
+}
+.formEditProfile{
+    margin:20px 0px;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+label>input,
+label>.textAreaBio{
+    margin:5px 0px 15px 0px
+}
+label>input{
+    padding:10px;
+    border-radius: 5px;
+    border:1px solid rgb(214, 214, 214);
+    outline: none;
+}
+label>.textAreaBio{
+    outline: none;
+    resize: none;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border:1px solid rgb(214, 214, 214);
+}
+.submitProfileEdit{
+    padding:8px 20px;
+    background-color: rgb(80, 124, 255);
+    border:1px solid rgb(80, 124, 255);
+    color:white;
+    border-radius: 5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+.submitProfileEdit:disabled{
+    cursor:not-allowed;
+    background-color:rgb(184, 200, 250);
+    border:1px solid rgb(184, 200, 250);
+}
+
+@media(min-width:600px){
+    .editProfileContainerInner{
+        border:1px solid rgb(214, 214, 214);
+        padding:20px;
+        box-shadow: 0px 1px 5px 0px black;
+        margin:70px auto;
+        width: 600px;
+    }
+}

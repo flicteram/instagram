@@ -1,0 +1,159 @@
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin:0 auto;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.profileTop{
+    padding:70px 10px 0px 10px;
+    display: flex;
+}
+.profileTopName{
+    font-size: 1rem;
+    font-weight: 500;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: center;
+    overflow: hidden;
+}
+.profileTopFollowers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap:10px;
+    row-gap: 10px;
+    padding:0px 10px;
+}
+.postsProfile,
+.followers,
+.following{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+}
+.statsName{
+    color:rgb(185, 185, 185)
+}
+.statsNumber{
+    font-weight: 500;
+}
+.optionsButton,
+.unfollowButton,
+.followButton{
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: .5px;
+    background-color: white;
+    border:1px solid rgb(185, 185, 185);
+    padding:10px;
+    max-width: 100px;
+    color:black;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: center;
+    cursor: pointer;
+}
+.unfollowButton{
+    color:rgb(80, 124, 255);
+}
+.followButton{
+    background-color: rgb(80, 124, 255);
+    border:1px solid rgb(80, 124, 255);
+    color:white;
+}
+
+.profileBio{
+    font-size: 0.9rem;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.profileOptions{
+    margin-top:10px;
+    padding:5px;
+    display: flex;
+    justify-content: space-evenly;
+    border-top:1px solid rgb(185, 185, 185);
+    border-bottom:1px solid rgb(185, 185, 185);
+}
+.postsDisplay{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap:5px;
+    padding:0px 0px 10px 0px;
+}
+.postsProfileContiner{
+    padding:0px 0px 50px 0px;
+}
+.skeletonProfileContainer{
+    max-width: 1000px;
+    margin:0 auto;
+}
+.skeletonAvatarContainer{
+    padding:70px 10px 0px 10px;
+}   
+.skeletonAvatar{
+    display: flex;
+}
+.skeletonAvatarInfo{
+    width:70%;
+}
+.skeletonProfilePosts{
+    margin-top:5px;
+    padding:0px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+
+@media(min-width:500px){
+    .postsDisplay{
+        padding:0;
+    }
+    .postsProfile,
+    .followers,
+    .following{
+        flex-direction: row;
+    }
+    .statsName{
+        margin-left: 5px;
+        color:black;
+    }
+    .postsProfileContiner{
+        padding:0;
+    }
+}
+@media(min-width:700px){
+    .profileTop{
+        padding:90px 50px 20px 50px
+    }
+    .skeletonAvatar{
+        padding:20px;
+        align-items: center;
+    }
+    .profileTopName{
+        grid-column-end:2 ;
+    }
+    .optionsButton,
+    .unfollowButton,
+    .followButton{
+        grid-column-start: 2;
+    }
+}
+@media(min-width:735px){
+    .postsDisplay{
+        gap:20px
+    }
+    .skeletonProfilePosts{
+        gap:20px;
+    }
+}
+@media(min-width:840px){
+    .postsDisplay{
+        margin-bottom: 20px;
+    }
+}

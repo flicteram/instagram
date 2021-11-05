@@ -1,23 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import {Switch,Route} from 'react-router-dom'
+import SignIn from './Pages/SignIn';
+import Home from './Pages/Home';
+import NewPost from './Pages/NewPost'
+import CommentPage from './Pages/CommentPage'
+import Profile from './Pages/Profile';
+import EditProfile from './Pages/EditProfile';
+import PostPage from './Pages/PostPage'
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='appContainer'>
+    <Switch >
+      <Route exact path='/'>
+        <Home/>
+      </Route>  
+      <Route path='/signin'>
+        <SignIn/>
+      </Route>
+      <Route path='/newPost'>
+        <NewPost/>
+      </Route>
+      <Route path='/comments/:postId'>
+        <CommentPage/>
+      </Route>
+      <Route path='/profile/:profileId'>
+        <Profile/>
+      </Route>
+      <Route path='/EditProfile/:profileId'>
+        <EditProfile/>
+      </Route>
+      <Route path='/post/:postId'>
+        <PostPage/>
+      </Route>
+    </Switch>
     </div>
   );
 }

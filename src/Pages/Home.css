@@ -1,0 +1,69 @@
+.homeContainer{
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.homeRightContainerBig{
+    display: none;
+}
+@media(min-width:500px){
+    .homePostsContainer{
+        padding:0;
+    }
+}
+@media(min-width:1050px){
+    .homeContainer{
+        align-items: center;
+    }
+    .homeContainerInner{
+        display: flex;
+        justify-content: space-between;
+        width: 1000px;
+        position: relative;
+    }
+    .homePostsContainer{
+        width: 60%
+    }
+    .homeRightContainerBig{
+        height: 70px;
+        display:flex;
+        width: 37%;
+        position: sticky;
+        top: 90px;
+        right: 0;
+        flex-direction: column;
+    }
+    .homeRightAvatarContainer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .homeRightAvatarInner{
+        display: flex;
+        align-items: center;
+    }
+    .homeRightUserContainer{
+        margin-left: 20px;
+        max-width: 200px;
+        overflow: hidden;
+    }
+    .homeRightSignOut{
+        align-self: center;
+        color:rgb(80, 124, 255);
+        background-color: inherit;
+        border:0px solid white;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .goToProfileHomeButton{
+        background-color: inherit;
+        border:none;
+        font-weight: 400;
+        color:rgb(185, 185, 185);
+        cursor: pointer;
+    }
+
+}

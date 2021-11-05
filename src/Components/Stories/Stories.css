@@ -1,0 +1,51 @@
+.myStoryContainer{
+    position: relative;
+    text-align: center;
+}
+.storyContainer{
+    margin-top:55px;
+}
+.carousel{
+    padding:10px 0px;
+    border-bottom:1px solid rgb(214, 214, 214);
+    max-width: 600px;
+    margin:0 auto;
+}
+.addIconStory{
+    position:absolute;
+    width: 100px;
+    top:30px;
+    right: 10px;
+    color:white;
+    background-color: rgb(102, 140, 255);
+    border-radius: 50%;
+}
+.yourStory{
+    font-size:0.7rem;
+    margin-top:5px;
+}
+.storyImg{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border:3px solid rgb(226, 19, 54);
+}
+.personStory{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width:600px){
+    .storyContainer{
+        margin-top:80px;
+        
+    }
+    .carousel{
+        border:1px solid rgb(214, 214, 214);
+        background-color: white;
+        border-radius: 5px;
+        padding:15px 0px;
+    }
+}

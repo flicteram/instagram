@@ -1,0 +1,42 @@
+.postOption{
+    border-bottom: 1px solid rgb(185, 185, 185);
+    width: 100%;
+    text-align: center;
+    padding:20px;
+    font-size: .9rem;
+    height: 100%;
+    cursor: pointer;
+}
+.postOptionDelete,
+.postOptionUnfollow,
+.postOptionFollow{
+    height: 100%;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    width: 100%;
+    text-align: center;
+    padding:20px;
+    font-size: .9rem;
+    color:red;
+    font-weight: 700;
+    cursor: pointer;
+}
+.postOptionFollow{
+    color:rgb(80, 124, 255);
+    cursor: pointer;
+}
+.postOptionLast{
+    height: 100%;
+    font-size: .9rem;
+    width: 100%;
+    text-align: center;
+    padding:20px;
+    cursor: pointer;
+}
+.postOptionLast:active,
+.postOption:active,
+.postOptionDelete:active,
+.postOptionUnfollow:active,
+.postOptionFollow:active{
+    background-color: rgb(185, 185, 185);
+    color: white;
+}

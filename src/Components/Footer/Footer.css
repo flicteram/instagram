@@ -1,0 +1,18 @@
+.footerBig{
+    display: flex;
+    flex-direction: column;
+    margin-top:30px;
+    align-items: center;
+    background-color:white;
+    padding:20px 0px;
+}
+.footerBig>div{
+    display: flex;
+    margin-top:10px;
+}
+.footerBig>h5{
+    font-weight: 600;
+    color:red;
+    font-size:.9rem;
+}
+

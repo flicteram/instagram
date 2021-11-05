@@ -1,0 +1,136 @@
+.commentPageContainer{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+}
+.navComments{
+    position:fixed;
+    z-index: 1000;
+    background-color: white;
+    left:0;
+    width: 100%;
+}
+.navCommentsInner{
+    max-width: 1000px;
+    margin:0 auto;
+}
+.nav{
+    z-index: 1000;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid rgb(214, 214, 214);
+}
+.commentsTitle{
+    z-index: 1000;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.commentContainer{
+    z-index: 1000;
+    background-color: rgb(248, 248, 248);
+    padding:10px;
+    display: flex;
+    border-bottom:1px solid rgb(214, 214, 214);
+    align-items: center;
+    position: relative;
+}
+.textAreaComment{
+    margin-left: 10px;
+    outline: none;
+    padding: 15px 45px 15px 10px;
+    resize: none;
+    width: 100%;
+    border-radius: 30px;
+    outline: none;
+    border:1px solid rgb(214, 214, 214)
+}
+.postCommentButton{
+    background-color: white;
+    border:0px;
+    position:absolute;
+    right: 20px;
+    color:rgb(80, 124, 255);
+    font-weight: 600;
+    cursor: pointer;
+}
+.postCommentButton:disabled{
+    cursor:not-allowed;
+    color:rgb(184, 200, 250);
+}
+.commentPostDescription{
+    padding:130px 0px 15px 0px;
+    margin:0px 10px;
+    display: flex;
+    flex-direction: column;
+    border-bottom:1px solid rgb(214, 214, 214);
+}
+.commentPostAll{
+    margin-left: 10px;
+    align-self: center;
+}
+.commentPostUserPosted:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.commentPostDescriptionAvatar{
+    display: flex;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+.commentPostDescriptionText{
+    font-weight: 400;
+}
+.timeAgoComment{
+    margin-left: 45px;
+    margin-top:10px;
+    font-size: 0.7rem;
+    color:rgb(185, 185, 185);
+}
+.commentContainerUser{
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+}
+.commentAvatarUser{
+    display: flex;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+.commentUserAll{
+    align-self: center;
+    margin-left: 10px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.commentUsername:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.commentUser{
+    font-weight: 400;
+}
+.timeAgoCommentUser{
+    margin-left: 45px;
+    margin-top:10px;
+    font-size: 0.7rem;
+    color:rgb(185, 185, 185);
+}
+
+@media(min-width:1000px){
+    .commentPageContainer{
+        border-left:1px solid rgb(214, 214, 214);
+        border-right:1px solid rgb(214, 214, 214);
+        border-bottom: 1px solid rgb(214, 214, 214);
+    }
+    .nav{
+        border-right:1px solid rgb(214, 214, 214);
+        border-left:1px solid rgb(214, 214, 214);
+    }
+    .commentContainer{
+        border-right:1px solid rgb(214, 214, 214);
+        border-left:1px solid rgb(214, 214, 214);
+    }
+}

@@ -1,0 +1,30 @@
+.navComponent{
+    width: 100%;
+    position:fixed;
+    left:0;
+    top:0;
+    border-bottom:1px solid rgb(214, 214, 214);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+.navComponentTitle{
+    z-index: 1000;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.navComponentInside{
+    width: 1000px;
+    z-index: 1000;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(min-width:1000px){
+    .navComponentInside{
+        padding:10px 0px
+    }
+}

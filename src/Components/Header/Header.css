@@ -1,0 +1,48 @@
+.navMainLow{
+    z-index: 1000;
+    position:fixed;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    border-bottom:1px solid rgb(214, 214, 214);
+    background-color: white;
+}
+.logoHeader{
+    width: 100px;
+    cursor: pointer;
+}
+.navMainHigh{
+    display: none;
+}
+.navMainHighOptions{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+.navMainHighInner{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+@media(min-width:500px){
+    .navMainLow{
+        display: none;
+    }
+    .navMainHigh{
+        z-index: 1000;
+        position:fixed;
+        left:0;
+        width: 100%;
+        border-bottom:1px solid rgb(214, 214, 214);
+        background-color: white;
+        padding:10px;
+        display: flex;
+        justify-content:center
+    }
+}
+@media(min-width:1050px){
+    .navMainHigh{
+        padding:10px 0px;
+    }
+}
