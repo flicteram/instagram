@@ -2,7 +2,7 @@
 
 An instagram clone made in order to sharpen my front-end skills.
 
-Live: https://www.flicteram.github.io/instagram
+Live: https://flicteram.github.io/instagram/
 
 ## Features 
             - Google authentification provided by Firebase;
