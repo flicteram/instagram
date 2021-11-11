@@ -63,7 +63,7 @@ function PostPage(){
             {postInfo.data&&<Post data={postInfo} user={user} isLoading={loading} postPage={true}/>}
         </div>
         <div className='postPageMorePostsFromContainer'>
-            <h4>More posts from <span onClick={()=>history.push(`/profile/${postInfo.data.uid}`)}>{postInfo.data.username}</span></h4>
+            <h4>More posts from <span className='morePostsGoToProfile' onClick={()=>history.push(`/profile/${postInfo.data.uid}`)}>{postInfo.data.username}</span></h4>
             <div className='postPageMorePostsContainer'>
                 {morePosts.slice(0,7).filter(post=>post.id!==postId).map(item=><PostDisplayProfile item={item}/>)}
             </div>

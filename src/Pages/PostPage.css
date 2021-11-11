@@ -30,6 +30,10 @@
 .postPageMorePostsFromContainer>h4>span{
     color:black;
 }
+.morePostsGoToProfile:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 @media(min-width:770px){
     .postPagePostContainer{
         padding: 0px 10px 0px 10px;
