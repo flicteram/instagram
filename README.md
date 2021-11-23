@@ -4,8 +4,12 @@ An instagram clone made in order to sharpen my front-end skills.
 
 Live: https://flicteram.github.io/instagram/
 
+## Desktop 
+<img width="100%"  src="https://user-images.githubusercontent.com/85151322/143032130-39d6a351-ce04-4959-b462-0e8d182c6dfc.gif">
+
+
 ## Mobile Version
-<img width="200px" src="https://user-images.githubusercontent.com/85151322/142999577-1b2984af-ce2f-4c4e-9a3f-c3e8ebec0357.gif">
+<img width="20%" src="https://user-images.githubusercontent.com/85151322/142999577-1b2984af-ce2f-4c4e-9a3f-c3e8ebec0357.gif">
 
 ### Features 
             - Google authentification provided by Firebase;
