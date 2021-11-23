@@ -4,8 +4,11 @@ import logo from '../Components/Images/instagramLogo.png'
 import {Context} from '../Context'
 import {auth} from '../firebase'
 import {signInWithPopup,GoogleAuthProvider} from 'firebase/auth'
-import iphoneImage from '../Components/Images/iphoneimage.jpg'
-import showImages from "../showImages";
+import iphoneImage from '../Components/Images/iphoneimage.png'
+import showImages from "../showImagesPhone";
+import macImage from '../Components/Images/macImage.png'
+import showImagesDesktop from '../showImagesDesktop'
+
 
 
 function SignIn(){
@@ -13,8 +16,8 @@ function SignIn(){
     const {setUser}=useContext(Context)
     const provider = new GoogleAuthProvider()
 
-    function nextSlide(){
-        if(index<showImages.length-1){
+    function nextSlide(length){
+        if(index<length-1){
             setIndex(index+1)
         }
         else{
@@ -23,7 +26,7 @@ function SignIn(){
     }
 
     useEffect(()=>{
-        const intervalId = setInterval(nextSlide,5000)
+        const intervalId = setInterval(()=>nextSlide(showImages.length||showImagesDesktop.length),5000)
 
         return ()=>clearInterval(intervalId)
     },[index])
@@ -40,12 +43,24 @@ function SignIn(){
     }
     return( 
     <div className='signInContainer'>
-        <div className='iphoneContainer'>
+        <div className='previewContainer'>
+            <div className='iphoneContainer'>
             <img src={iphoneImage} className='iphonePic'/>
-            {showImages.map((item,ind)=>(
-                <img key={ind} src={item.image} alt={'Preview'} className={index===ind?'iphoneContent':'iphoneContentNoDisplay'}/>
+            {showImages.map((photo,ind)=>(
+                <img key={ind} src={photo.image} alt={'Preview'} className={index===ind?'iphoneContent':'iphoneContentNoDisplay'}/>
                 )
             )}
+            </div>
+            
+            <div className='desktopContainer'>
+            <img src={macImage} className='macImage'/>
+            {showImagesDesktop.map((photo,ind)=>(
+                <img src={photo.image} className={index===ind?'desktopImage':'desktopImageNoDisplay'}/>
+            )
+            )}
+            
+            </div>
+
         </div>
         
         <div className='signInInner'>
