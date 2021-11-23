@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/instagram/static/css/main.21c1f1d0.chunk.css",
-    "main.js": "/instagram/static/js/main.1d8a0e90.chunk.js",
-    "main.js.map": "/instagram/static/js/main.1d8a0e90.chunk.js.map",
+    "main.css": "/instagram/static/css/main.02b17061.chunk.css",
+    "main.js": "/instagram/static/js/main.808a6a6f.chunk.js",
+    "main.js.map": "/instagram/static/js/main.808a6a6f.chunk.js.map",
     "runtime-main.js": "/instagram/static/js/runtime-main.59c53931.js",
     "runtime-main.js.map": "/instagram/static/js/runtime-main.59c53931.js.map",
     "static/js/2.a2a9a115.chunk.js": "/instagram/static/js/2.a2a9a115.chunk.js",
     "static/js/2.a2a9a115.chunk.js.map": "/instagram/static/js/2.a2a9a115.chunk.js.map",
     "index.html": "/instagram/index.html",
-    "static/css/main.21c1f1d0.chunk.css.map": "/instagram/static/css/main.21c1f1d0.chunk.css.map",
+    "static/css/main.02b17061.chunk.css.map": "/instagram/static/css/main.02b17061.chunk.css.map",
     "static/js/2.a2a9a115.chunk.js.LICENSE.txt": "/instagram/static/js/2.a2a9a115.chunk.js.LICENSE.txt",
     "static/media/bezos.7c39e173.jpg": "/instagram/static/media/bezos.7c39e173.jpg",
     "static/media/desktop1.8eb8120e.png": "/instagram/static/media/desktop1.8eb8120e.png",
@@ -45,7 +45,7 @@
   "entrypoints": [
     "static/js/runtime-main.59c53931.js",
     "static/js/2.a2a9a115.chunk.js",
-    "static/css/main.21c1f1d0.chunk.css",
-    "static/js/main.1d8a0e90.chunk.js"
+    "static/css/main.02b17061.chunk.css",
+    "static/js/main.808a6a6f.chunk.js"
   ]
 }
