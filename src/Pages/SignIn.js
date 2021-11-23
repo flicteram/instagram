@@ -43,6 +43,7 @@ function SignIn(){
     }
     return( 
     <div className='signInContainer'>
+        <img src={logo} className='logoBig'/>
         <div className='previewContainer'>
             <div className='iphoneContainer'>
             <img src={iphoneImage} className='iphonePic'/>
