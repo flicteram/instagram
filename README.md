@@ -8,7 +8,7 @@ Live: https://flicteram.github.io/instagram/
 <img width="100%"  src="https://user-images.githubusercontent.com/85151322/143032130-39d6a351-ce04-4959-b462-0e8d182c6dfc.gif">
 
 
-## Mobile Version
+## Mobile
 <img width="300px" src="https://user-images.githubusercontent.com/85151322/142999577-1b2984af-ce2f-4c4e-9a3f-c3e8ebec0357.gif">
 
 ### Features 
