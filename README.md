@@ -9,7 +9,7 @@ Live: https://flicteram.github.io/instagram/
 
 
 ## Mobile Version
-<img width="20%" src="https://user-images.githubusercontent.com/85151322/142999577-1b2984af-ce2f-4c4e-9a3f-c3e8ebec0357.gif">
+<img width="300px" src="https://user-images.githubusercontent.com/85151322/142999577-1b2984af-ce2f-4c4e-9a3f-c3e8ebec0357.gif">
 
 ### Features 
             - Google authentification provided by Firebase;
