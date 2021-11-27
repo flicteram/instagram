@@ -11,7 +11,7 @@ function Nav({user,leftNav,rightNav,title}){
         <div className='navComponentInside'>
         <ArrowBackIosNewIcon sx={{width:20,height:20,cursor:'pointer'}} onClick={()=>leftNav()}/>
         <h1 className='navComponentTitle'>{title}</h1>
-        <Avatar onClick={()=>rightNav()} src={user.photoURL} sx={{width:25,height:25,cursor:'pointer'}}/>
+        <Avatar onClick={rightNav} src={user.photoURL} sx={{width:25,height:25,cursor:'pointer'}}/>
         </div>
     </nav>
     )

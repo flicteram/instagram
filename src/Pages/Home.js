@@ -79,7 +79,7 @@ function Home(){
                             </div>
                         </div>
 
-                        <button onClick={()=>handleLogOut()} className='homeRightSignOut'>Sign out</button>
+                        <button onClick={handleLogOut} className='homeRightSignOut'>Sign out</button>
                         
                     </div>
                     <Footer/>

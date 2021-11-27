@@ -30,7 +30,7 @@ function Header({user,isHome}){
             {isHome?<HomeIcon sx={{width:25,height:25,cursor:'pointer'}} onClick={()=>history.push('/')}/>:
             <HomeOutlinedIcon sx={{width:25,height:25,cursor:'pointer'}} onClick={()=>history.push('/')}/>}
             <AddBoxOutlinedIcon sx={{width:25,height:25,cursor:'pointer'}} onClick={()=>history.push('/newPost')}/>
-            <LogoutIcon sx={{width:25,height:25,cursor:'pointer'}} onClick={()=>handleLogOut()}/>
+            <LogoutIcon sx={{width:25,height:25,cursor:'pointer'}} onClick={handleLogOut}/>
             <Avatar onClick={()=>history.push(`/profile/${user.uid}`)} src={user.photoURL} sx={{width:25,height:25,cursor:'pointer'}}/>
             </div>
             </div>

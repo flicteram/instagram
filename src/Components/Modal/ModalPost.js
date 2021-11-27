@@ -82,14 +82,14 @@ function ModalPost({data,user,userData,goToPost}){
         <MoreHorizIcon sx={{width:28,height:28,cursor:'pointer'}} onClick={()=>setIsOpen(true)}/>
         {data.data.uid===user.uid?
         <Modal isOpen={isOpen} onRequestClose={()=>setIsOpen(false)} style={goToPost?modalStylesGoToPost:modalStylesDontGoToPost}>
-        <p onClick={()=>handleDeletePost()} className='postOptionDelete'>Delete</p>
+        <p onClick={handleDeletePost} className='postOptionDelete'>Delete</p>
         {goToPost&&<p onClick={()=>history.push(`/post/${data.id}`)} className='postOption'>Go To Post</p>}
         <p onClick={()=>setIsOpen(false)} className='postOptionLast'>Cancel</p>
         </Modal>:
         <Modal isOpen={isOpen} onRequestClose={()=>setIsOpen(false)} style={goToPost?modalStylesGoToPost:modalStylesDontGoToPost}>
         {userData.followers.includes(user.uid)?
-        <p onClick={()=>handleUnfollow()} className='postOptionUnfollow'>Unfollow</p>:
-        <p onClick={()=>handleFollow()} className='postOptionFollow'>Follow</p>
+        <p onClick={handleUnfollow} className='postOptionUnfollow'>Unfollow</p>:
+        <p onClick={handleFollow} className='postOptionFollow'>Follow</p>
         }   
         {goToPost&&<p onClick={()=>history.push(`/post/${data.id}`)} className='postOption'>Go To Post</p>}
         <p onClick={()=>setIsOpen(false)} className='postOptionLast'>Cancel</p>

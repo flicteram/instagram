@@ -213,8 +213,8 @@ function Post({data,user,goToPost,postPage}){
                     <div className={postPage?'reactionsPostPage':'reactions'}>
                         <div className='reactiosLeft'>
                             {data.data.whoLiked.includes(user.uid)?
-                            <FavoriteOutlinedIcon sx={{width:28,height:28,color:'rgb(245, 61, 61)',cursor:'pointer'}} onClick={()=>handleDislike()}/>:
-                            <FavoriteBorderOutlinedIcon onClick={()=>handleLikes()} sx={{width:28,height:28,cursor:'pointer'}}/>}
+                            <FavoriteOutlinedIcon sx={{width:28,height:28,color:'rgb(245, 61, 61)',cursor:'pointer'}} onClick={handleDislike}/>:
+                            <FavoriteBorderOutlinedIcon onClick={handleLikes} sx={{width:28,height:28,cursor:'pointer'}}/>}
                             <ModeCommentOutlinedIcon onClick={()=>history.push(`/comments/${data.id}`)} theme={themeComment} sx={stylesLow}/>
                             <ModeCommentOutlinedIcon onClick={()=>history.push(`/post/${data.id}`)} theme={themeComment} sx={stylesHigh}/>
                             </div>

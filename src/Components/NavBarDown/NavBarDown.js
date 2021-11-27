@@ -22,7 +22,7 @@ function NavBarDown({user,home,border}){
            { home?<HomeIcon className='menuIcon' onClick={()=>history.push('/')} sx={{width:30,height:30, color:'black'}}/>:
            <HomeOutlinedIcon className='menuIcon' onClick={()=>history.push('/')} sx={{width:30,height:30, color:'black'}}/>}
             <AddBoxOutlinedIcon onClick={()=>history.push('/newPost')} className='menuIcon' sx={{width:30,height:30}}/>
-            <LogoutIcon className='menuIcon' onClick={()=>handleLogOut()} sx={{width:30,height:30}}/>
+            <LogoutIcon className='menuIcon' onClick={handleLogOut} sx={{width:30,height:30}}/>
             <Avatar onClick={()=>history.push(`/profile/${user.uid}`)} src={user.photoURL} sx={{width:30,height:30,border:border}}/>
         </nav>
     )

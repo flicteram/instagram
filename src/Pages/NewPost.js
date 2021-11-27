@@ -98,7 +98,7 @@ function NewPost(){
                 {loadingImage?<LinearProgress sx={{position:'absolute',top:'0px',width:'100%'}}/>:
                 imageUrl?
                 <div className='divImagePreview'
-                 onClick={()=>handleDeleteFile()}>
+                 onClick={handleDeleteFile}>
                 <img src={imageUrl} alt='Preview' className='imagePreview'/>
                 <DeleteForeverIcon sx={{cursor:'pointer'}}/>
                 </div>:
