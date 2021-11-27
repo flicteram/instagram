@@ -154,10 +154,10 @@ function Profile(){
                 
                 <h2 className='profileTopName'>{profile.displayName}</h2>
                 {profileId!==user.uid&&!profile.followers.includes(user.uid)?
-                <button onClick={()=>handleFollow()} className='followButton'>Follow</button>:
+                <button onClick={handleFollow} className='followButton'>Follow</button>:
                 profileId===user.uid? 
                 <button onClick={()=>history.push(`/EditProfile/${profileId}`)} className='optionsButton'>Edit Profile</button>:
-                <button onClick={()=>handleUnfollow()}className='unfollowButton'>Unfollow</button>}
+                <button onClick={handleUnfollow} className='unfollowButton'>Unfollow</button>}
                     <div className='postsProfile'>
                         <p className='statsNumber'>{postsProfile.length}</p>
                         <p className='statsName'>posts</p>
