@@ -181,7 +181,7 @@ function Profile(){
             </div>
             
             {grid?<div className='postsDisplay'>
-                {postsProfile.map((item,index)=><PostDisplayProfile key={index} item={item}/>)}
+                {postsProfile.map(post=><PostDisplayProfile key={post.id} item={post}/>)}
             </div>:
             <div className='postsProfileContiner'>
             {postsProfile.map(data=><Post key={data.id} data={data} user={user} goToPost={true} userData={profile}/>)}

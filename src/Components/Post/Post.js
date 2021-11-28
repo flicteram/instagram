@@ -197,13 +197,13 @@ function Post({data,user,goToPost,postPage}){
                                 </div>
                                 <p className='timeAgoCommentPostPage'>{timeAgoComment(data.data.timePosted.seconds)}</p>
                             </div>
-                {postComments.map((item,index)=>(
-                            <div key={index} className='commentPostPage'>
+                {postComments.map(comment=>(
+                            <div key={comment.timestamp.seconds} className='commentPostPage'>
                                 <div className='commentsTextPostPage'>
-                                <Avatar onClick={()=>history.push(`/profile/${item.userId}`)} src={item.userPhoto} sx={{width:35,height:35,cursor:'pointer'}}/>
-                                <p key={index}> <span onClick={()=>history.push(`/profile/${item.userId}`)} className='commentsPostPageUsername'>{item.username}</span> <span className='commentUnderPostText'>{item.commentText}</span></p>
+                                <Avatar onClick={()=>history.push(`/profile/${comment.userId}`)} src={comment.userPhoto} sx={{width:35,height:35,cursor:'pointer'}}/>
+                                <p> <span onClick={()=>history.push(`/profile/${comment.userId}`)} className='commentsPostPageUsername'>{comment.username}</span> <span className='commentUnderPostText'>{comment.commentText}</span></p>
                                 </div>
-                                <p className='timeAgoCommentPostPage'>{timeAgoComment(item.timestamp.seconds)}</p>
+                                <p className='timeAgoCommentPostPage'>{timeAgoComment(comment.timestamp.seconds)}</p>
                             </div>
                             
                         ))}
@@ -227,8 +227,8 @@ function Post({data,user,goToPost,postPage}){
                         <p onClick={()=>history.push(`/post/${data.id}`)} className={postPage?'viewAllCommentsPostPageBig':'viewAllCommentsBig'}>View all {postComments.length} comments</p>
                         </div>}
 
-                        {postComments.slice(0,2).map((item,index)=>(
-                            <p key={index} className={postPage?'commentUnderPostPage':'commentUnderPost'}><span onClick={()=>history.push(`/profile/${item.userId}`)} className='commentPostUsername'>{item.username}</span> <span className='commentUnderPostText'>{item.commentText}</span></p>
+                        {postComments.slice(0,2).map(comment=>(
+                            <p key={comment.timestamp.seconds} className={postPage?'commentUnderPostPage':'commentUnderPost'}><span onClick={()=>history.push(`/profile/${comment.userId}`)} className='commentPostUsername'>{comment.username}</span> <span className='commentUnderPostText'>{comment.commentText}</span></p>
                         ))}
                         <p className={postPage?'postedTimePostPageDown':'postedTime'}>{timeAgo()}</p>
                         <form onSubmit={e=>handlePostComment(e)} className='addCommentPostBig'>

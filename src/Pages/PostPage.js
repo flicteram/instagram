@@ -19,6 +19,7 @@ function PostPage(){
     const {user} = useContext(Context)
     const [loading,setLoading]=useState(true)
 
+
     async function getRelevantPosts(){
         const q = query(collection(db,'posts'),where('uid','==',postInfo.data.uid))
         const querySnapshot = await getDocs(q)
@@ -65,7 +66,7 @@ function PostPage(){
         <div className='postPageMorePostsFromContainer'>
             <h4>More posts from <span className='morePostsGoToProfile' onClick={()=>history.push(`/profile/${postInfo.data.uid}`)}>{postInfo.data.username}</span></h4>
             <div className='postPageMorePostsContainer'>
-                {morePosts.slice(0,7).filter(post=>post.id!==postId).map(item=><PostDisplayProfile item={item}/>)}
+                {morePosts.slice(0,7).filter(post=>post.id!==postId).map(post=><PostDisplayProfile key={post.id} item={post}/>)}
             </div>
         </div>
         

@@ -101,13 +101,13 @@ function CommentPage(){
                 {postData.timePosted&&<p className='timeAgoComment'>{timeAgoComment(postData.timePosted.seconds)}</p>}
             </div>
             {!commentsData?<LinearProgress/>:
-            commentsData.map((item,index)=>(
-                <div className='commentContainerUser' key={index}>
+            commentsData.map(comment=>(
+                <div className='commentContainerUser' key={comment.timestamp.seconds}>
                     <div className='commentAvatarUser'>
-                        <Avatar src={item.userPhoto} sx={{width:35,height:35,cursor:'pointer'}} onClick={()=>history.push(`/profile/${item.userId}`)}/>
-                        <p className='commentUserAll'><span onClick={()=>history.push(`/profile/${item.userId}`)} className='commentUsername'>{item.username}</span> <span className='commentUser'>{item.commentText}</span></p>
+                        <Avatar src={comment.userPhoto} sx={{width:35,height:35,cursor:'pointer'}} onClick={()=>history.push(`/profile/${comment.userId}`)}/>
+                        <p className='commentUserAll'><span onClick={()=>history.push(`/profile/${comment.userId}`)} className='commentUsername'>{comment.username}</span> <span className='commentUser'>{comment.commentText}</span></p>
                     </div>
-                    <p className='timeAgoCommentUser'>{timeAgoComment(item.timestamp.seconds)}</p>
+                    <p className='timeAgoCommentUser'>{timeAgoComment(comment.timestamp.seconds)}</p>
                 </div>
             ))}
         </div>
