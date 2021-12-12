@@ -1,7 +1,7 @@
 import React from "react";
 import {useHistory} from 'react-router-dom'
 import './Header.css'
-import logo from '../Images/instagramLogo.png'
+import logo from '../Images/instaLogo.png'
 import HomeIcon from '@mui/icons-material/Home';
 import Avatar from '@mui/material/Avatar'
 import LogoutIcon from '@mui/icons-material/Logout';
